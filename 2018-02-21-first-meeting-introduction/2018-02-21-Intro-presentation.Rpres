@@ -1,12 +1,3 @@
-<style>
-.reveal h1, .reveal h2, .reveal h3 {
-  word-wrap: normal;
-  -moz-hyphens: none;
-}
-.small-code pre code {
-  font-size: 1em;
-}
-</style>
 
 First Meeting: crash into R
 ========================================================
