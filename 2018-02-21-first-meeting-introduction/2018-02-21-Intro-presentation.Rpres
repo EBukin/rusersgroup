@@ -84,6 +84,47 @@ Moving to Tutorial in R
 type: section
 
 
+Resources - where are how to learn?
+========================================================
+
+PRACTICE
+* refer to the [R Studio cheetsheets](https://www.rstudio.com/resources/cheatsheets/);
+
+Read:
+* [R for Data Science](http://r4ds.had.co.nz/);
+* [Official CRAN documentation](https://cran.r-project.org/manuals.html) (sometimes boring to read);
+* Search questions and answers on [stakexchange](https://stackoverflow.com/tags/r/info);
+* [r pubs](http://rpubs.com/);
+* [CRAN Task View](https://cran.r-project.org/web/views/);
+* [R Studio Community](https://community.rstudio.com/);
+
+
+Resources - where are how to learn?
+========================================================
+
+
+Learn:
+* [TRY SWIRL](http://swirlstats.com/);
+* E-courses [DataCamp](https://www.datacamp.com/courses/free-introduction-to-r), [coursera - R prodgramming](https://www.coursera.org/learn/r-programming), [edx - Statistics in R](https://www.edx.org/course/statistics-r-harvardx-ph525-1x-1), [edx - R programming](https://www.edx.org/course/introduction-r-data-science-microsoft-dat204x-7).;
+* do [excersise](https://r-exercises.com/);
+* see [R by example](http://www.mayin.org/ajayshah/KB/R/index.html);
+
+Some other resources:
+  * [Impatient R](http://www.burns-stat.com/documents/tutorials/impatient-r/)
+  * [R Wikibooks](https://en.wikibooks.org/wiki/R_Programming)
+  * [Examples of data analysis in R](https://stats.idre.ucla.edu/other/dae/)
+  * GOOGLE
+
+Thank you
+========================================================
+type: section
+
+
+NOT COVERED
+========================================================
+type: section
+
+
 Tidy data
 ====================================
 type: section
@@ -203,41 +244,5 @@ Where to go next?
 ====================================
 type: section
 # Data manipulation with `dplyr` - next meeting
-
-
-Resources - where are how to learn?
-========================================================
-
-PRACTICE
-* refer to the [R Studio cheetsheets](https://www.rstudio.com/resources/cheatsheets/);
-
-Read:
-* [R for Data Science](http://r4ds.had.co.nz/);
-* [Official CRAN documentation](https://cran.r-project.org/manuals.html) (sometimes boring to read);
-* Search questions and answers on [stakexchange](https://stackoverflow.com/tags/r/info);
-* [r pubs](http://rpubs.com/);
-* [CRAN Task View](https://cran.r-project.org/web/views/);
-* [R Studio Community](https://community.rstudio.com/);
-
-
-Resources - where are how to learn?
-========================================================
-
-
-Learn:
-* [TRY SWIRL](http://swirlstats.com/);
-* E-courses [DataCamp](https://www.datacamp.com/courses/free-introduction-to-r), [coursera - R prodgramming](https://www.coursera.org/learn/r-programming), [edx - Statistics in R](https://www.edx.org/course/statistics-r-harvardx-ph525-1x-1), [edx - R programming](https://www.edx.org/course/introduction-r-data-science-microsoft-dat204x-7).;
-* do [excersise](https://r-exercises.com/);
-* see [R by example](http://www.mayin.org/ajayshah/KB/R/index.html);
-
-Some other resources:
-  * [Impatient R](http://www.burns-stat.com/documents/tutorials/impatient-r/)
-  * [R Wikibooks](https://en.wikibooks.org/wiki/R_Programming)
-  * [Examples of data analysis in R](https://stats.idre.ucla.edu/other/dae/)
-  * GOOGLE
-
-Thank you
-========================================================
-type: section
 
   
