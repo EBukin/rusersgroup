@@ -19,10 +19,12 @@ swirl()
 # numeric 
 1
 1L # numeric - integer number
+A <- 123
 A <- 1
 B <- 2
 C <- A + B
 C
+
 3 == C
 
 ### ### ### ### ### ### ###
@@ -52,7 +54,7 @@ tt <- TRUE
 ff <- FALSE
 
 ttt <- T
-fff <- FALSE
+fff <- F
 
 ttt == tt
 fff == ff
@@ -73,7 +75,7 @@ namedVector <- setNames(1:5, letters[1:5]) # Same in another way
 
 # Named vector of characters and other thins
 namedVecChar <- 
-  c("a" = "first letter", 
+  c(a = "first letter", 
     "b" = "second letter", 
     "c" = "third letter")
 logVector <- c(TRUE, FALSE, T)
@@ -151,13 +153,95 @@ Y <- as.matrix(0.25 * X[,1] + 2.2 * X[,2] - 0.65 * X[,3] + rnorm(10, 0, 0.5))
 
 # data.frame ---------------------------------------------------------------
 
+# Attempt to convert matrix into a data.frame
+testDF <- as_data_frame(X)
+testDF
+
+# Sowing some examples of data manipulation with data frames
+# Loading a required universe of packages `tidyverse`
+# If it is not installed, run:
+# install.packages("tidyverse") # and then:
+library(tidyverse)
+
+# Creating new variables in a data.frame()
+
+# Oldfasion way - vectorised operations
+exampleData <- testDF
+exampleData$Y <- 
+  0.5 * exampleData$V1 + 
+  2 * exampleData$V2 - 
+  0.7 * exampleData$V3 + 
+  rnorm(nrow(.), 0, 0.5)
+
+# modern way with the help of the `mutate()` function from `dplyr` package
+exampleData <- 
+  testDF %>% 
+  mutate(Y = 0.5 * V1 + 2*V2 - 0.7 *V3 + rnorm(nrow(.), 0, 0.5))
+
+# Summarising all variables in the dataframe
+exampleData %>% 
+  summarise_all("mean")
+
+# Getting summary about the variables in the dataframe
+# Using base R functions
+summary(exampleData)
+
+# Using psych package If nor installed, run:
+# install.packages("psych")
+# instead of loading package "psych" into the environment, we use psych:: 
+# This mean that R will look for a function "describe()" in the psych package
+psych::describe(exampleData)
+
+# Filter dataframe
+# Old fashion vectorised way:
+exampleData[exampleData$Y < 0, ]
+# Using "filter()" from dplyr (tidyverse) package
+exampleData %>%
+  filter(Y < 0)
+
+# Selecting variables from a dataframe
+# Oldfasion way
+exampleData$V1
+exampleData["V1"]
+
+# Using dplyr from tydiverse
+exampleData %>% 
+  select(V1)
+
+# Combining multiple operations:
+# Filter and select
+exampleData %>%
+  filter(Y < 0) %>%
+  select(V2, V3)
+
+
+# Regression --------------------------------------------------------------
+
+# Simple linear regression example
+fit <- lm(formula = Y ~ V2 + V3, data = exampleData)
+fit
+
+# See what is the structure of the fit object
+str(fit)
+
+# get summary about the fitted object
+summary(fit)
+
+# Plot main diagnosics plots
+plot(fit)
+
+# make a scattered plot of all variables f a dataframe
+plot(exampleData)
+
+# another regression exmple--------------------------------------------------
+
 df <- as.data.frame(cbind(Y,X))
 
 # example of a LM with such data
 fit <- lm(V1 ~ V3 + V4, data = df)
 fit
 
-# lists -------------------------------------------------------------------
+# NOT COVERED - lists -------------------------------------------------------
 
 help(list)
 
@@ -196,11 +280,14 @@ library("tidyverse")
 getwd()
 
 # Step 2. Set a working directory if the one you have is the worng one
-setwd()
+setwd("~/projects/rusers/2018-02-21-first-meeting-introduction/")
 
 # Step 3. Load packages
 
 # we need `tibble`, `readr` and `readxl` packages
+# install.packages("tibble")
+# install.packages("readr")
+# install.packages("readxl")
 library(tibble)
 library(readr)
 library(readxl)
@@ -209,7 +296,19 @@ library(readxl)
 
 # We load data with read_csv
 untidy_fao_data <- 
-  read_csv("2018-02-21-first-meeting-introduction/FAOSTAT_example_data.csv")
+  read_csv(file = "FAOSTAT_example_data.csv")
+
+untidy_fao_data <- 
+  read_csv(file = 
+             "https://raw.githubusercontent.com/EBukin/rusersgroup/master/2018-02-21-first-meeting-introduction/FAOSTAT_example_data.csv")
+
+untidy_fao_data_read <- 
+  read.csv(file = "FAOSTAT_example_data.csv", stringsAsFactors = FALSE)
+
+untidy_fao_data
+
+glimpse(untidy_fao_data)
+View(untidy_fao_data)
 
 # We load data with read_xlsx
 untidy_wb_data <- 
@@ -229,13 +328,6 @@ glimpse(untidy_fao_data)
 View()
 View(untidy_wb_data)
 View(untidy_fao_data)
-
-
-# Tidy data ---------------------------------------------------------------
-
-
-
-
 
 
 
