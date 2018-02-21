@@ -27,24 +27,24 @@ type: section
 
 Growth of R
 ========================================================
-
-```{r echo = FALSE, out.width = "80%"}
+left:80%
+```{r echo = FALSE}
 knitr::include_graphics("R_traf.png")
 ```
-
+***
 
 Least disliked language
 ========================================================
-
-```{r echo = FALSE, out.width = "80%"}
+left:80%
+```{r echo = FALSE}
 knitr::include_graphics("R_dislikes.png")
 ```
-
+***
 
 R-UseRs
 ========================================================
-left:80%
-```{r echo = FALSE, out.height = "50%"}
+left:60%
+```{r echo = FALSE}
 knitr::include_graphics("R_users.png")
 ```
 ***
@@ -55,7 +55,6 @@ Some other cool things
 transition: rotate
 incremental: true
 autosize: true
-type: prompt
 
 * Access and handle data with [tidyverse](https://www.tidyverse.org/) and [other tools](https://cran.r-project.org/doc/manuals/r-devel/R-data.html)
 * Easy to analyse data with specifically developed tools [CRAN Task View](https://cran.r-project.org/web/views/)
@@ -84,53 +83,62 @@ Moving to Tutorial in R
 ====================================
 type: section
 
-# Main data types and structures
-# Packages: `install.packages()`, `tidyverse`
-# Get data in R: `readr::read_csv()`; `readxl:read_excel()`
 
 Tidy data
 ====================================
 type: section
 
-# What is tidy?
-# How to make it tidy?
-# Get data in R: `readr::read_csv()`; `readxl:read_excel()`
+* What is tidy?
+* How to make it tidy?
+* Get data in R: `readr::read_csv()`; `readxl:read_excel()`
 
 
-Data sets examples 1
+Data sets examples 1 (1)
 ====================================
-```{r}
+autosize: true
+```{r echo = FALSE}
 DSR::table1
+```
+
+Data sets examples 1 (2)
+====================================
+autosize: true
+```{r echo = FALSE}
 DSR::table3
 ```
 
 Data sets examples 1 - structure
 ========================================================
-```{r echo = FALSE, out.height = "50%"}
+autosize: true
+```{r echo = FALSE}
 knitr::include_graphics("tidy-6.png")
 ```
 
 Data sets examples 2
 ====================================
-```{r}
+autosize: true
+```{r echo = FALSE}
 DSR::table2
 ```
 
 Data sets examples 2 - structure
 ========================================================
+autosize: true
 ```{r echo = FALSE}
 knitr::include_graphics("tidy-5.png") 
 ```
 
 Data sets examples 3
 ====================================
-```{r}
+autosize: true
+```{r echo = FALSE}
 DSR::table4 # cases
 DSR::table5 # population
 ```
 
 Data sets examples 3 - structure
 ====================================
+autosize: true
 ```{r echo = FALSE}
 knitr::include_graphics("tidy-7.png")
 ```
@@ -149,12 +157,14 @@ Borrowed from [Data science with R: Tidying](http://garrettgman.github.io/tidyin
 
 Tidy data example - structure
 ====================================
+autosize: true
 ```{r echo = FALSE}
 knitr::include_graphics("tidy-4.png")
 ```
 
 Tidy data example
 ====================================
+autosize: true
 ```{r}
 DSR::table1
 ```
@@ -171,13 +181,15 @@ Functions:
 
 spread()
 ====================================
+autosize: true
 ```{r echo = FALSE}
 knitr::include_graphics("tidy-8-spread.png")
 ```
 
 gather()
 ====================================
-```{r echo = FALSE, out.height = "50%"}
+autosize: true
+```{r echo = FALSE}
 knitr::include_graphics("tidy-8-gather.png")
 ```
 
@@ -190,14 +202,8 @@ For more information, see [Non-tidy data](https://simplystatistics.org/2016/02/1
 Where to go next?
 ====================================
 type: section
-# Data manipulation with `dplyr` - meeting
+# Data manipulation with `dplyr` - next meeting
 
-* `select()`
-* `filter()`
-* `distinct()`
-* `mutate()`
-* `summarise()`
-* `arrange()` and others operations with data.
 
 Resources - where are how to learn?
 ========================================================
@@ -228,8 +234,7 @@ Some other resources:
   * [Impatient R](http://www.burns-stat.com/documents/tutorials/impatient-r/)
   * [R Wikibooks](https://en.wikibooks.org/wiki/R_Programming)
   * [Examples of data analysis in R](https://stats.idre.ucla.edu/other/dae/)
-  
-Google
+  * GOOGLE
 
 Thank you
 ========================================================

@@ -27,20 +27,20 @@ type: section
 
 Growth of R
 ========================================================
-
-<img src="R_traf.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" width="80%" />
-
+left:80%
+![plot of chunk unnamed-chunk-1](R_traf.png)
+***
 
 Least disliked language
 ========================================================
-
-<img src="R_dislikes.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" width="80%" />
-
+left:80%
+![plot of chunk unnamed-chunk-2](R_dislikes.png)
+***
 
 R-UseRs
 ========================================================
-left:80%
-<img src="R_users.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" height="50%" />
+left:60%
+![plot of chunk unnamed-chunk-3](R_users.png)
 ***
 [Most downloaded packages/authors](https://www.rdocumentation.org/trends?page1=1&sort1=total&page2=1&sort2=total&page3=1&page4=1)
 
@@ -49,7 +49,6 @@ Some other cool things
 transition: rotate
 incremental: true
 autosize: true
-type: prompt
 
 * Access and handle data with [tidyverse](https://www.tidyverse.org/) and [other tools](https://cran.r-project.org/doc/manuals/r-devel/R-data.html)
 * Easy to analyse data with specifically developed tools [CRAN Task View](https://cran.r-project.org/web/views/)
@@ -78,25 +77,19 @@ Moving to Tutorial in R
 ====================================
 type: section
 
-# Main data types and structures
-# Packages: `install.packages()`, `tidyverse`
-# Get data in R: `readr::read_csv()`; `readxl:read_excel()`
 
 Tidy data
 ====================================
 type: section
 
-# What is tidy?
-# How to make it tidy?
-# Get data in R: `readr::read_csv()`; `readxl:read_excel()`
+* What is tidy?
+* How to make it tidy?
+* Get data in R: `readr::read_csv()`; `readxl:read_excel()`
 
 
-Data sets examples 1
+Data sets examples 1 (1)
 ====================================
-
-```r
-DSR::table1
-```
+autosize: true
 
 ```
       country year  cases population
@@ -108,9 +101,9 @@ DSR::table1
 6       China 2000 213766 1280428583
 ```
 
-```r
-DSR::table3
-```
+Data sets examples 1 (2)
+====================================
+autosize: true
 
 ```
       country year              rate
@@ -124,14 +117,12 @@ DSR::table3
 
 Data sets examples 1 - structure
 ========================================================
-<img src="tidy-6.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" height="50%" />
+autosize: true
+![plot of chunk unnamed-chunk-6](tidy-6.png)
 
 Data sets examples 2
 ====================================
-
-```r
-DSR::table2
-```
+autosize: true
 
 ```
        country year        key      value
@@ -151,24 +142,18 @@ DSR::table2
 
 Data sets examples 2 - structure
 ========================================================
-![plot of chunk unnamed-chunk-7](tidy-5.png)
+autosize: true
+![plot of chunk unnamed-chunk-8](tidy-5.png)
 
 Data sets examples 3
 ====================================
-
-```r
-DSR::table4 # cases
-```
+autosize: true
 
 ```
       country   1999   2000
 1 Afghanistan    745   2666
 2      Brazil  37737  80488
 3       China 212258 213766
-```
-
-```r
-DSR::table5 # population
 ```
 
 ```
@@ -180,7 +165,8 @@ DSR::table5 # population
 
 Data sets examples 3 - structure
 ====================================
-![plot of chunk unnamed-chunk-9](tidy-7.png)
+autosize: true
+![plot of chunk unnamed-chunk-10](tidy-7.png)
 
 Tidy data
 ====================================
@@ -196,10 +182,12 @@ Borrowed from [Data science with R: Tidying](http://garrettgman.github.io/tidyin
 
 Tidy data example - structure
 ====================================
-![plot of chunk unnamed-chunk-10](tidy-4.png)
+autosize: true
+![plot of chunk unnamed-chunk-11](tidy-4.png)
 
 Tidy data example
 ====================================
+autosize: true
 
 ```r
 DSR::table1
@@ -227,11 +215,13 @@ Functions:
 
 spread()
 ====================================
-![plot of chunk unnamed-chunk-12](tidy-8-spread.png)
+autosize: true
+![plot of chunk unnamed-chunk-13](tidy-8-spread.png)
 
 gather()
 ====================================
-<img src="tidy-8-gather.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" height="50%" />
+autosize: true
+![plot of chunk unnamed-chunk-14](tidy-8-gather.png)
 
 Non-tidy data
 ====================================
@@ -242,14 +232,8 @@ For more information, see [Non-tidy data](https://simplystatistics.org/2016/02/1
 Where to go next?
 ====================================
 type: section
-# Data manipulation with `dplyr` - meeting
+# Data manipulation with `dplyr` - next meeting
 
-* `select()`
-* `filter()`
-* `distinct()`
-* `mutate()`
-* `summarise()`
-* `arrange()` and others operations with data.
 
 Resources - where are how to learn?
 ========================================================
@@ -280,8 +264,7 @@ Some other resources:
   * [Impatient R](http://www.burns-stat.com/documents/tutorials/impatient-r/)
   * [R Wikibooks](https://en.wikibooks.org/wiki/R_Programming)
   * [Examples of data analysis in R](https://stats.idre.ucla.edu/other/dae/)
-  
-Google
+  * GOOGLE
 
 Thank you
 ========================================================
